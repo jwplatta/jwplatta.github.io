@@ -2,9 +2,15 @@
 
 - type: github
   icon: "fab fa-github"
+  url: 'https://github.com/jwplatta'
 
 - type: twitter
   icon: "fab fa-twitter"
+  url:  'https://twitter.com/jwplatta'
+
+- type: linkedin
+  icon: 'fab fa-linkedin'
+  url:  'https://www.linkedin.com/in/jwplatta/'
 
 - type: email
   icon: "fas fa-envelope"
@@ -19,10 +25,7 @@
 #   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
 #   url:  ''                  # Fill with your Mastodon account page, rel="me" will be applied for verification
 #
-# - type: linkedin
-#   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your Linkedin homepage
-#
+
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
