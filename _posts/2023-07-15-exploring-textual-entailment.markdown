@@ -8,7 +8,6 @@ math: true
 toc: true
 img_path: /assets/img/posts/
 ---
-
 During my time at Georgia Tech, one of the datasets I found most interesting for projects was the Stanford Natural Language Inference (SNLI) dataset[^1]. This particular dataset consists of 570k sentence pairs, each labeled with an inferential relationship: neutral, contradiction, or entailment.
 
 Although we may often take for granted our own ability to recognize these inferential connections (even when our judgment fails us), the task of enabling computers to discern such relationships is challenging. For instance, any proficient English speaker would intuitively recognizes that "A man inspects the uniform of a figure in some East Asian country." contradicts "The man is sleeping". Yet training a computer to do the same requires significant effort.
