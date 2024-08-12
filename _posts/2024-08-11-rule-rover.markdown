@@ -38,4 +38,4 @@ Of course RuleRover is an experimental library and definitely not production-rea
 The RuleRover gem can be found [here](https://github.com/jwplatta/rule_rover) and a simple example [here](https://github.com/jwplatta/rule_rover/blob/main/examples/TRADING_STRATEGY.md). I'm always looking for feedback and collaborators. If you're interested in symbolic AI, logic programming, or just want to chat about the philosophy of mind, feel free to reach out.
 
 ## References
-1. Russell, S., & Norvig, P. (2021). _Artificial intelligence: A modern approach_ (4th ed.). Pearson.
+[^1]: Russell, S., & Norvig, P. (2021). _Artificial intelligence: A modern approach_ (4th ed.). Pearson.
