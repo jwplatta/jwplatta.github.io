@@ -2,4 +2,5 @@
 
 ## Description
 
-My personal site for hosting a blog and a portfolio of projects.
+My personal [site](https://jwplatta.github.io/) for hosting a blog and a portfolio of projects.
+
