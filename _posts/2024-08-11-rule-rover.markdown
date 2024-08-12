@@ -26,7 +26,7 @@ RuleRover is able to answer queries about what the knowledge base entails using 
 
 Backward chaining also incorporates an `ActionRegistry`. The `ActionRegistry` allows us to link actions to specific rules in our knowledge base. When the conditions of a rule are met, the corresponding action gets triggered. This feature is crucial for systems that need to do something tangible based on logical inferences, not just answer true or false questions.
 
-[![](https://mermaid.ink/img/pako:eNqtVMFymzAQ_RVGpyTFnhhMcDk0Y6ftdKa3-ta6w6yFjDUWEpFEYsfjf68w4CINbi_hJN4-7XvSrvaIsMgIShBmoNRnCrmEYsU9850R7zsXr4xkOVmAIt6xCdXfhznWVPAfJKdKy4Mn20WPsSRcE47Jr9-eapdqxXsEI0CkvrntQZJoCdjGzF6g7LHDTn1_X_alJEoZJ5Y5RjeaZI9WmlyKimcuqqq10lRXmtiwBp6BzOgbSaEExyV5tux0h2oszbUoKO4Ob9laakl57nEoSA_FgtdyWlkaLyAprBmxUS1SZSn_1X0SRcnIvhM-DlTCY2Sjh3BJ861-f0tOj_QtfQO19eAcVy4sK2Zu_RxLCyj7HZNlTrsU4sWuHAbG0l6Gf3uzPC2YwDtvU3H835rNpYSDZxoDirQOKceB06x94QXg3atpractUF6n7luw39tuPVSs54pY72zdJkxxnfEmF8B879LX5pDDF_BVyHe1sWnytS5uO7GLqp3zbjRy2uMay72vazznPA3N6UBxUR3KUkedV3SNZj_yhuVs9cbjT7351Pqxh8MQxU1zNyDXMJGPCiILoJmZ4OfyrZDeEtOoKDFLM792K7TiJ8ODSovlgWOUaFkRH1VlBpq0Ax8lG2DKoCXwn0IUHcn8ouSI9iiJZ-MwjD5OwiCK7oMwjn10QMkoNHAQT8OHhziaBXEwPfno7ZxgMr6fBFEcBtNgMosjH5nhm29bodMf_c_6Yw?type=png)
+![rule_rover_classes](rule_rover_classes.png){: w="1000" }
 
 ## Conclusion
 Logic programming isn't just a set of algorithms; it's a philosophy about what intelligence takes. At the moment large language models are in the spotlight, but there's still something compelling about the clarity and rigor of symbolic AI and formal logic.
