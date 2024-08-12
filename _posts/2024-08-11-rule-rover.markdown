@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "RuleRover: Logic Programming"
-date:   2024-03-04 10:00:00 -0500
-categories: [artificial-intelligence, philosophy, symbolic-ai, ruby]
+title:  "RuleRover: A Logic Programming Library in Ruby"
+date:   2024-08-11 10:00:00 -0500
+categories: [artificial-intelligence]
 tags: [ruby, logic programming, symbolic ai, artificial intelligence, prolog]
 math: true
 toc: true
@@ -26,7 +26,7 @@ RuleRover is able to answer queries about what the knowledge base entails using 
 
 Backward chaining also incorporates an `ActionRegistry`. The `ActionRegistry` allows us to link actions to specific rules in our knowledge base. When the conditions of a rule are met, the corresponding action gets triggered. This feature is crucial for systems that need to do something tangible based on logical inferences, not just answer true or false questions.
 
-![rule_rover_classes](rule_rover_classes.png){: w="1000" }
+![rule_rover_classes](rule_rover_classes.png){: w="800" }
 
 ## Conclusion
 Logic programming isn't just a set of algorithms; it's a philosophy about what intelligence takes. At the moment large language models are in the spotlight, but there's still something compelling about the clarity and rigor of symbolic AI and formal logic.
