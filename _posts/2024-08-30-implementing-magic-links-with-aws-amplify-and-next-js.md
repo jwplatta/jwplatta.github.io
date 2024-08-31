@@ -12,7 +12,7 @@ img_path: /assets/img/posts/
 
 I went on a little adventure recently while working on a prototype Next.js app. I needed to implement magic links for authentication. My team wanted to use magic links in our prototype because it reduces friction for users trying out our app; no one wants or needs another password. But implementing the links turned out to be a slog through the AWS documentation wilderness. The following captures the bits and pieces I had to pull together to make the solution work.
 
-AWS Amplify makes setting up a lot of the standard backend resources an application needs very easy. However, it doesn't support magic links out of the box. So I needed to put together a custom authentication flow that uses DynamoDB, Cognito, and Lambda functions.
+AWS Amplify makes setting up a lot of the standard backend resources an application needs very easy[^1]. However, it doesn't support magic links out of the box. So I needed to put together a custom authentication flow that uses DynamoDB, Cognito, and Lambda functions.
 
 So here's a summary of the simple magic link strategy I implemented:
 1. Create a unique token when the user submits the login form
@@ -275,5 +275,6 @@ export const auth = defineAuth({
 Overall, it was an interesting little project that required piecing together various AWS services and documentation. It provided a good opportunity to dive deeper into Amplify's customization options and created a smoother user experience for my team's prototype app.
 
 ## References
-[^1]: https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-challenge.html
-[^2]: https://docs.amplify.aws/react/build-a-backend/functions/set-up-function/
+[^1]: https://docs.amplify.aws/nextjs/build-a-backend/auth/set-up-auth/
+[^2]: https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-challenge.html
+[^3]: https://docs.amplify.aws/react/build-a-backend/functions/set-up-function/
