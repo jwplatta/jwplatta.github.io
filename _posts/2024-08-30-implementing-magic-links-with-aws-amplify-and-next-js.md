@@ -131,7 +131,7 @@ export default function Login() {
 
 ## Custom Authentication Flow
 
-Next, to make the authentication work, I needed to define a custom authentication flow in AWS Cognito. This flow requires defining three custom triggers in the form of Lambda functions[^1].
+Next, to make the authentication work, I needed to define a custom authentication flow in AWS Cognito. This flow requires defining three custom triggers in the form of Lambda functions[^3].
 
 First, the Define Auth Challenge is the entry point to the auth flow. It determines whether to send the user the authentication challenge or the authentication tokens.
 ```javascript
@@ -276,5 +276,5 @@ Overall, it was an interesting little project that required piecing together var
 
 ## References
 [^1]: https://docs.amplify.aws/nextjs/build-a-backend/auth/set-up-auth/
-[^2]: https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-challenge.html
-[^3]: https://docs.amplify.aws/react/build-a-backend/functions/set-up-function/
+[^2]: https://docs.amplify.aws/react/build-a-backend/functions/set-up-function/
+[^3]: https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-challenge.html
