@@ -9,7 +9,6 @@ on:
       - README.md
       - LICENSE
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -42,7 +41,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3   # reads from a '.ruby-version' or '.tools-version' file if 'ruby-version' is omitted
+          ruby-version: 3
           bundler-cache: true
 
       - name: Build site
@@ -58,6 +57,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
+
+      - name: List uploaded artifacts
+        run: ls -alh _site${{ steps.pages.outputs.base_path }}
 
   deploy:
     environment:
