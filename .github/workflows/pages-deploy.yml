@@ -59,6 +59,9 @@ jobs:
           path: "_site${{ steps.pages.outputs.base_path }}"
           name: github-pages
 
+      - name: List uploaded artifacts
+        run: ls _site${{ steps.pages.outputs.base_path }}
+
   deploy:
     environment:
       name: github-pages
