@@ -2,7 +2,7 @@
 layout: post
 title:  "Basic Concepts of Options"
 date:   2025-07-08 10:00:00 -0500
-categories: [investing, writing-to-learn]
+categories: [options-trading]
 tags: [investing, writing-to-learn]
 math: true
 toc: true
