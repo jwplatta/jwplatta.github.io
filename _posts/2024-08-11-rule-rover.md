@@ -1,9 +1,14 @@
 ---
 layout: post
-title:  "RuleRover: A Logic Programming Library in Ruby"
-date:   2024-08-11 10:00:00 -0500
-categories: [artificial-intelligence]
-tags: [ruby, logic programming, symbolic ai, artificial intelligence, prolog]
+title: "RuleRover: A Logic Programming Library in Ruby"
+date: 2024-08-11 10:00:00 -0500
+categories:
+  - artificial-intelligence
+tags:
+  - ruby
+  - prolog
+  - artificial-intelligence
+  - logic-programming
 math: true
 toc: true
 img_path: /assets/img/posts/
