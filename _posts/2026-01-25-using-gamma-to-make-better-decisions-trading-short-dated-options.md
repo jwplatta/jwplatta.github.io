@@ -15,7 +15,7 @@ For short-vol strategies like iron condors, it takes an extreme move for a trade
 I learned this the hard way with Mr. Trump playing the markets like a boy spinning a yoyo. Back in October, markets already seemed to be in a fragile place when headlines hit around potential 100% tariffs on China tied to rare-earths export restrictions. The market sold off, then just as quickly reversed into a late-October rally heading into the FOMC meeting. I was whipsawed between those two extreme moves.
 
 Of course, while the headlines precipitated the downward move, they did not create the conditions that allowed it. Even before the headlines, the options market already had a particular structure: concentrations of gamma, fragile zones, and asymmetric hedging pressure. The news simply acted as a catalyst, determining how that structure expressed itself in price. But back in October I was totally unaware of the underlying market structure and so it was easy to get frustrated by unexpected events.
-### The Limits of Delta
+## The Limits of Delta
 
 When I first learned this trade, I was given a simple playbook for managing risk:
 - Avoid binary events
@@ -32,7 +32,7 @@ But unlike roulette, where probabilities are static, delta is not a static value
 And most of the time this works until it doesn't. What I found unsatisfying about this approach was that adjustments made "because delta increased" often did not improve my position. After sharp moves, I frequently adjusted only to have the market reverse and bounce back like October. I also noticed that a 5 delta option on one day felt very different from a 5 delta option on another.
 
 As both an engineer and a philosopher, these observations and experiences raised the deeper question, "If delta isn't stable, what controls how and when it changes?"
-### Gamma as a Structural Lens
+## Gamma as a Structural Lens
 
 Market behavior is shaped by many interacting forces, including dealer and market-maker hedging, event-driven catalysts, and shifts in volatility.
 
@@ -56,21 +56,21 @@ This measure did not help me predict price or tell me directly how and when to t
 - How dealer hedging flows might reinforce or dampen price movement
 
 Based on this, I started building a small set of diagnostic charts to help me reason about market structure:
-#### GEX by Price
+### GEX by Price
 Shows how net gamma exposure would evolve across a range of hypothetical prices, highlighting where hedging behavior is likely to flip as spot moves.
 ![SPXW_gex_price](SPXW_gex_price.png){: w="1000" }
-#### GEX by Strike (per expiry)
+### GEX by Strike (per expiry)
 Aggregates gamma exposure by strike over multiple calendar days revealing where dealer hedging activity is most concentrated. This helps me identify potential pinning zones versus unstable regions.
 ![SPXW_gex_strike](SPXW_gex_strike.png){: w="1000" }
-#### Directional Gamma Imbalance (DGI)
+### Directional Gamma Imbalance (DGI)
 Compares gamma mass above versus below spot within a defined window, producing a normalized measure of whether hedging pressure is asymmetric to the upside or downside.
 ![dgi_2026-01-23](dgi_2026-01-23.png){: w="1000" }
-#### Gross Gamma Exposure (GGE)
+### Gross Gamma Exposure (GGE)
 Tracks the total amount of nearby gamma in the system, offering a coarse but useful signal for distinguishing between mean-reverting and breakout-prone regimes.
 ![gross_gex_2026-01-23](gross_gex_2026-01-23.png){: w="1000" }
 
 I'm not claiming originality here. Variations of these charts exist all around. What mattered for me was having a coherent structural framework to interpret them.
-### What Changed for Me
+## What Changed for Me
 
 Using these diagnostics didn't magically increase my win rate beyond 90–95%. What did change was my decision quality.
 
@@ -92,7 +92,7 @@ Because I had a clearer view of that structure, my response wasn't improvised. I
 Throughout the week, I watched how gamma evolve to see whether the structure that justified those changes persisted as the situation de-escalated.
 
 This wasn’t about predicting headlines. It was about adjusting when an external shock disrupted the existing structure, and then monitoring whether that structure stabilized or fundamentally changed.
-### Open Questions
+## Open Questions
 
 Paying attention to the GEX has helped me manage risk more deliberately, but I'm under no illusion that it's the full story. In particular, I'm focused on trying to answer when gamma structure meaningfully shapes price behavior versus situations where it matters a lot less. For example, across different volatility and market regimes.
 
