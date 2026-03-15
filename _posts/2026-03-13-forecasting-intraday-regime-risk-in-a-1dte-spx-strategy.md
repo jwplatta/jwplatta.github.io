@@ -24,9 +24,11 @@ The baseline strategy itself is intentionally simple. Each trade sells a 1DTE SP
 | Range ≥ 51.698 | 323             | 0.727        | -0.768       | 0.87        | -5.144       | 0.158                | -248          |
 
 The strategy performs well when the SPX stays within a relatively small range. But when the range exceeds roughly 52 points, the strategy loses money on average. Given this behavior, I wanted tot answer the questionL: Can we estimate the probability that tomorrow will be a high-range session at the time the trade is entered? If that probability can be forecast with reasonable accuracy, then it might be possible to condition the strategy by filtering trades, adjusting position size, or modifying exit rules. To formalize this, I treat the next day’s range regime as a latent state variable:
+
 $$
 Y_{range}(t) = \begin{cases} 1 & \text{if next-day SPX intraday range} \ge 51.698 \\ 0 & \text{otherwise} \end{cases}
 $$
+
 Tomorrow’s range is unknown at the time the trade is opened. So the goal of this post is to determine whether the probability of that regime can be estimated using information available at entry.
 
 ## **Experimental Setup**
@@ -60,6 +62,7 @@ The experiments evaluated four different feature sets to determine which predict
 | Implied Vol           | 0.668        | 0.234     | 0.789   |
 | Combined              | 0.614        | 0.213     | 0.777   |
 | Final Regime Features | 0.574        | 0.193     | 0.775   |
+
 Several patterns stand out. The realized volatility features produce the best ranking performance, reflected in their AUC score. However, the implied volatility features alone perform worse in terms of probability accuracy, suggesting that the volatility indices by themselves do not capture the short-term regime shifts relevant to this strategy. Combining realized and implied volatility improves results slightly, but the largest improvement comes from adding two shock variables: overnight gap magnitude and prior absolute return. The final feature set (5-day average intraday range, prior VIX/VIX9D slope, overnight gap magnitude, and prior absolute return) achieves the best log loss and Brier score, indicating that it produces the most accurate probability forecasts.
 
 In order to arrive at the final feature set, I performed ablation tests by removing each feature one at a time to better understand which features drive the signal. The most important variable is clearly the 5-day average range. Removing it causes log loss to deteriorate substantially, indicating that recent realized volatility state is the strongest predictor of the next day's regime. The shock variables (prior absolute return and overnight gap magnitude) also contribute meaningful signal. Removing either of them weakens the model. Interestingly, implied volatility variables appear largely redundant once realized volatility is included. Removing VIX or VIX9D features barely changes the model’s performance.
