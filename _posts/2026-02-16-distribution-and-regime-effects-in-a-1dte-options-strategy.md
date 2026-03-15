@@ -1,8 +1,12 @@
 ---
 layout: post
 title: Distribution and Regime Effects in a 1DTE Options Strategy
-categories: [options-trading, writing-to-learn]
-tags: [spx, iron-condor]
+categories:
+  - options-trading
+  - writing-to-learn
+tags:
+  - spx
+  - 1dte-trade
 math: true
 toc: true
 img_path: /assets/img/posts/
