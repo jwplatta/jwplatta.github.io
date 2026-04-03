@@ -8,6 +8,7 @@ tags:
 categories:
   - options-trading
   - writing-to-learn
+  - spx
 toc: true
 img_path: /assets/img/posts/
 ---
