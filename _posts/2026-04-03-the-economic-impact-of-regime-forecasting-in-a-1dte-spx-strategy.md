@@ -61,6 +61,7 @@ The model successfully identifies clearly adverse regimes (high-probability buck
 | 0.4-0.6            | 59          | -41.73     |
 | 0.6-0.8            | 52          | -40.79     |
 | 0.8-1.0            | 52          | 138.67     |
+
 ## Analysis
 
 The results are mixed but informative. 
