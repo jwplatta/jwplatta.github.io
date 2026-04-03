@@ -47,6 +47,7 @@ From a classification standpoint, the regime model exhibits meaningful predictiv
 | low range  | 0.74      | 0.72   | 0.73      |
 | high range | 0.66      | 0.69   | 0.68      |
 | accuracy   |           |        | 0.71      |
+
 ![SPX Regime Confusion Matrix](spx_regime_cm.png)
 
 However, the most important insight comes from examining performance conditional on predicted probability.
