@@ -19,6 +19,7 @@ As a brief recap, I’ve been working toward automating a short volatility carry
 
 In the previous post, I showed that these high-range regimes are at least partially predictable using simple features such as recent realized volatility and term structure signals from VIX and VIX9D. The natural next question is whether those forecasts have any economic value. Specifically, can we improve the performance of the strategy by avoiding trades on days that are predicted to be high range?
 
+All the experiments and charts are generated using this [notebook](https://github.com/jwplatta/trade_lab/blob/main/notebooks/SPX-1DTE-Forecasting-Regime.ipynb) and the data you can find [here](https://github.com/jwplatta/trade_lab/tree/main/notebooks/data).
 ## Experimental Setup
 
 Rather than running a new backtest, I apply the regime model as a filter on the existing set of trades. The goal is to isolate the incremental value of the forecast without introducing additional complexity.
