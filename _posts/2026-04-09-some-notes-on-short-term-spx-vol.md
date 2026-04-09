@@ -41,7 +41,7 @@ This relationship is also reflected in the volatility averages (Table: Vol Avera
 
 Another observation is that the cases where the RV exceeds what's implied are not gradual, but sudden. Backward-looking realized volatility provides little information about whether the next trade will succeed. This can be seen by comparing the win rates of the spread buckets in the below table. When grouping by the IV–RV spread, the win rate increases monotonically as the spread widens. This suggests that when IV is more overstated relative to what actually occurs, outcomes improve. In contrast, when grouping by IV relative to trailing RV, win rates remain relatively flat across buckets. This indicates that trailing RV provides little useful information at trade entry.
 
-| iv_rv_spread buckets | Win Rate | iv_rolling_rv buckets | Win Rate |
+| iv_rv_spread buckets | Win Rate | iv_rolling_rv_spread buckets | Win Rate |
 | -------------------- | -------- | --------------------- | -------- |
 | (-45.34, 0.791]      | 0.936    | (-47.522, 0.64]       | 0.989    |
 | (0.791, 3.605]       | 0.996    | (0.64, 4.489]         | 0.970    |
