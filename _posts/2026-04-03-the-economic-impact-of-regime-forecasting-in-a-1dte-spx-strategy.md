@@ -65,7 +65,7 @@ The model successfully identifies clearly adverse regimes (high-probability buck
 
 ## Analysis
 
-The results are mixed but informative. 
+The results are mixed but informative.
 
 On one hand, the range regime model is directionally useful. It reduces exposure to high range days and improves the overall distribution of returns. This result is consistent with the earlier finding that high range regimes drive a disproportionate amount of the strategy's risk. On the other hand, the model fails to address the most important component of the problem: tail risk.
 
@@ -79,13 +79,13 @@ Second, and perhaps more important, the strategy itself is highly path dependent
 
 This path dependence makes tail events inherently difficult to anticipate and manage using a simple regime model. The model successfully captures broad volatility conditions, but it doesn't capture the specific sequences of price movements that trigger large losses. In practice, many of these events are driven by shocks or regime transitions that aren't well represented in the feature set for the model.
 
-In short, the model improves exposure to regimes, but it's too coarse to reliably eliminate the tail events that dominate the strategy’s risk and would make the strategy profitable. 
+In short, the model improves exposure to regimes, but it's too coarse to reliably eliminate the tail events that dominate the strategy’s risk and would make the strategy profitable.
 ## Conclusion
 
 The high range regime forecast model has clear economic value. Conditioning trades on predicted range reduces drawdowns and improves overall performance. Yet it's insufficient to make a 1DTE short volatility strategy viable on its own.
 
-The core issue is structural. The convexity and path dependence of 1DTE options make the strategy highly sensitive to intraday dynamics and tail events which are difficult to model and anticipate with limited data. In effect, even a reasonably accurate model can't totally eliminate the trades that ultimately drive negative expectancy of the strategy as its currently defined.
+The core issue is structural. The convexity and path dependence of 1DTE options make the strategy highly sensitive to intraday dynamics and tail events which are difficult to model and anticipate with limited data. Even a reasonably accurate model can't totally eliminate the trades that determine the negative expectancy of the strategy as it's currently defined.
 
-These result have led me to consider an alternative approach. Rather than continuing to refine a predictive model, I'll focus more on trade structures that are more controllable. For example, longer dated options, such as 7DTE trades, have lower convexity and are less sensitive to intraday path. Their outcomes depend on multi-day dynamics and should be easier to reason about and manage systematically.
+These results have led me to consider an alternative approach. Rather than continuing to refine a predictive model, I'll focus more on trade structures that are more controllable. For example, longer dated options, such as 7DTE trades, have lower convexity and are less sensitive to intraday path. Their outcomes depend on multi-day dynamics and should be easier to reason about and manage systematically.
 
-The next step is to decompose the mechanics of the 7DTE trade that have worked for me and evaluate simple, rule-based adjustments. For example, rules such as recentering the position when a delta threshold is breached can be tested directly to determine whether they improve, degrade, or have no effect on outcomes. Ultimately, a longer term goal might be to build a framework that combines these mechanics with simple regime filters and eventually a higher level strategy manager that determines when to deploy different structures and rules.
+The next step is to decompose the mechanics of the 7DTE trade that have worked for me and evaluate simple, rule-based adjustments. For example, rules such as recentering the position when a delta threshold is breached can be tested directly to determine whether they improve, degrade, or have no effect on outcomes. A longer term goal might be to build a framework that combines these mechanics with simple regime filters and eventually a higher level strategy manager that determines when to deploy different structures and rules.
