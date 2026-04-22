@@ -14,10 +14,9 @@ math: true
 One of the challenges trading short-dated iron condors is that their high probability of profit is often disconnected from their actual profitability. Most of the time they expire worthless and you keep the credit. But that high win rate doesn't imply positive expected value. The important question is whether repeating the trade over time leads to a net gain or loss. In other words, the focus should be on expected value (EV) rather than probability of profit. Determining EV in this context is non-trivial. It depends not only on the payoff structure, but also on trade management and evolving market conditions. To make this concrete, I consider three increasingly realistic approaches to estimate the EV of a single 7DTE SPX iron condor.
 
 The simplest approach is to estimate EV using the initial credit and option deltas as proxies for probabilities even though they don't actually measure the probability of the market hitting that level and assume that losses occur at maximum loss. This leads to the following expression for EV:
+
 $$
-
 E(x) = (1 - \delta_{\text{long put}} - \delta_{\text{long call}}) \cdot \text{credit} + (\delta_{\text{long put}} + \delta_{\text{long call}}) \cdot \text{max loss}
-
 $$
 
 As an example, consider an iron condor constructed from the SPX option chain with expiration April 6th, 2026 sampled at March 31st at 2:08pm:
@@ -100,4 +99,4 @@ Using the IV model to update prices as spot moves, the EV of the trade becomes n
 
 None of these EV calculations are perfect. They demonstrate that EV estimates for short-dated options are highly sensitive to modeling assumptions. Under simplistic assumptions the trade can appear more attractive. As the assumptions become increasingly realistic, the estimated EV deteriorates. The implication is that the payoff structure of the iron condor itself doesn't generate positive EV. Any persistent profitability is more likely to arise from factors such as regime selection, timing, execution, and the identification of mispriced volatility, rather than from the structure of the trade in isolation.
 
-Full notebook and data [here](https://github.com/jwplatta/trade_lab/blob/main/notebooks/IronCondor%20EV%20Calculations.ipynb).
+Full notebook with code for EV calculations and to build the IV surface model along with the sampled options data can be found [here](https://github.com/jwplatta/trade_lab/blob/main/notebooks/IronCondor%20EV%20Calculations.ipynb).
