@@ -24,7 +24,7 @@ The strongest standalone signals after conditioning are active-return mean rever
 <img src="us_equity_stat_arb_sleeve_return_correlations.png" alt="Returns Correlation Matrix" style="width: 60%; display: block; margin: 0 auto;" />
 
 
-However, many of the signal families I tested, in fact, have low correlation (see the heatmap). The portfolio becomes more interesting once I start adding these signals as new sleeves rather than focusing on maximizing standalone signal Sharpe.
+However, many of the signal families I tested, in fact, have low correlation (see the heatmap). Low correlation matters because independently profitable sleeves can smooth portfolio returns even when individual signals temporarily weaken. The portfolio becomes more interesting once I start adding these signals as new sleeves rather than focusing on maximizing standalone signal Sharpe.
 
 Specifically, distance-pairs mean reversion stands apart from the broader mean reversion cluster. Its correlations to every other family stay around 0.04 to 0.15. So even though DPMR is also a form of mean reversion, it defines reversion differently. It trades convergence toward a stock’s nearest historical peers rather than reversal toward a cross-sectional or factor-adjusted mean. That distinction produces a return stream that behaves more like a distinct alpha source.
 
@@ -59,7 +59,7 @@ $$
 s^{\text{pairs}}_{i,t} = -\operatorname{clip}(z_{i,t}, -2, 2)
 $$
 
-However, the DPMR conditioning filters partition the alpha engine across different market environments rather than creating duplicate exposure. The panic sleeve only trades after severe market drawdowns and functions as an episodic crisis reversion strategy with minimal drag in normal environments. The volatility contraction sleeve activates during calmer regimes where pair spreads revert steadily. The volatility expansion sleeve captures persistent dislocations during turbulent periods. And finally the always-on sleeve acts as the structural convergence engine. Together these four sleeves form the portfolio’s core diversification structure. 
+However, the DPMR conditioning filters partition the alpha engine across different market environments rather than creating duplicate exposure. The panic sleeve only trades after severe market drawdowns and functions as an episodic crisis reversion strategy with minimal drag in normal environments. The volatility contraction sleeve activates during calmer regimes where pair spreads revert steadily. The volatility expansion sleeve captures persistent dislocations during turbulent periods. And finally the always-on sleeve acts as the structural convergence engine. Together these four sleeves form the portfolio’s core diversification structure.
 
 With the DPMR and MR sleeves, adding monotonic momentum and event driven gap reversion further improves drawdown and return stability without materially increasing redundancy. The final result is an 8 sleeve portfolio with nearly double the Sharpe of the best standalone signal.
 
@@ -77,13 +77,13 @@ Still the diversified portfolio behaves much more robustly than the individual s
 
 ## **The portfolio fails when expected**
 
-The out-of-sample period ends up being one of the more interesting parts of the project. Post 2024 (period after the dashed line) returns flatten, rolling Sharpe compresses, and drawdowns increase. Yet the portfolio remains profitable and the equity curve continues trending upward. The behavior suggests regime sensitivity rather than obvious overfitting to the in-sample period.
+The out-of-sample period ends up being one of the more interesting parts of the project. Post 2024 (period after the dashed line) returns flatten, rolling Sharpe compresses, and drawdowns increase. Yet the portfolio remains profitable with the equity curve continuing upward. The behavior suggests regime sensitivity rather than obvious overfitting to the in-sample period.
 
 <img src="us_equity_stat_arb_oos.png" alt="OOS Results" style="width: 80%; display: block; margin: 0 auto;" />
 
 2024 is the only negative year. The market environment was dominated by strong index trends and concentrated mega cap leadership, reducing cross sectional reversal opportunities. A portfolio built primarily on short-horizon mean reversion, statistical arbitrage, and relative value convergence should be expected to struggle in exactly this regime.
 
-Importantly, the portfolio recovers afterward rather than continuing to decay. It turns positive again in 2025 and strengthens further in the early part of 2026 (I suspect it'll have struggled since the end of March 2026). This drawdown recovery pattern supports the interpretation that the weakness is regime driven rather than a structural failure. Rolling Sharpe dynamics also remain stable under leverage which also suggests that the conditioning and diversification structure continue functioning out-of-sample.
+Importantly, the portfolio recovers afterward rather than continuing to decay. It turns positive again in 2025 and strengthens further in the early part of 2026. This drawdown recovery pattern supports the interpretation that the weakness is regime driven rather than a structural failure. Rolling Sharpe dynamics also remain stable under leverage which also suggests that the conditioning and diversification structure continue functioning out-of-sample.
 
 The strongest years are 2020 and 2022. During these periods cross sectional opportunity expanded as stocks moved more independently. In these environments, the crisis conditioned DPMR and event sleeves activate more frequently while several volatility gated sleeves engaged during vol expansion.
 
@@ -97,6 +97,6 @@ The full report is [here](https://github.com/jwplatta/portfolio-research/blob/ma
 
 ## Resources
 
-Signals and portfolio construction methodology informed by: 
+Signals and portfolio construction methodology informed by:
 - Chan, Ernest P. *Quantitative Trading: How to Build Your Own Algorithmic Trading Business*. John Wiley & Sons, 2009. ISBN: 978-0-470-28488-9.
 - Chan, Ernest P. *Algorithmic Trading: Winning Strategies and Their Rationale*. Wiley, Wiley Trading series, 2013. ISBN: 978-1-118-46014-6.
