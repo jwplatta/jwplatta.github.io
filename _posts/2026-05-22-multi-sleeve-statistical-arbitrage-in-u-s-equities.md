@@ -93,7 +93,7 @@ The final portfolio’s strength comes less from maximizing any individual signa
 
 The out-of-sample results show regime sensitivity, particularly during the momentum dominated environment of 2024, but the diversification structure remains intact and performance recovers afterward. Overall, the project suggests that stable portfolio construction matters more than standalone signal optimization in cross-sectional statistical arbitrage.
 
-The full is [here]() and the code for producing the results is [here]().
+The full report is [here](https://github.com/jwplatta/portfolio-research/blob/main/reports/jwplatta_multi_sleeve_stat_arb_us_equities.pdf) and the code for producing the results is [here]().
 
 ## Resources
 
