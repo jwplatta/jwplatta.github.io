@@ -86,4 +86,4 @@ This distinction matters because many discussions about these coding agents impl
 
 I increasingly think of LLMs as tools that accelerate movement rather than tools that replace judgment and understanding. They can generate code, documentation, experiments, tests, and analyses at a speed that would have been impractical a few years ago. But deciding what belongs, what doesn't, which abstractions matter, which results are meaningful, and which directions are worth pursuing still depends on human understanding.
 
-Example notebook with manual and `qstudy` implementations [here](https://github.com/jwplatta/portfolio-research/blob/main/notebooks/shared/qstudy_example.ipynb) and qstudy source code [here](https://github.com/jwplatta/qstudy).
+Example notebook with manual and `qstudy` implementations [here](https://github.com/jwplatta/portfolio-research/blob/main/notebooks/shared/qstudy-example.ipynb) and qstudy source code [here](https://github.com/jwplatta/qstudy).
