@@ -22,7 +22,7 @@ As a quick aside, you might consider why someone would consistently take the oth
 
 In order to generate a dataset to compare the implied volatility with realized volatility I started with the VIX9D as a proxy for implied volatility over the next nine days. I then compute the forward nine day realized volatility from SPX log returns so that implied and realized measures are directly comparable. I define the IV-RV spread as the difference between the VIX9D measure and the forward realized volatility of the SPX. I also compute a three day rolling RV average as a simple backward-looking measure of recent market behavior. Finally, using the implied volatility, I estimate the expected move and place short strikes at roughly 1.5 standard deviations from spot. I then check how often these strikes would have expired in the money.
 
-A notebook with these calculations and the results can be found [here](https://github.com/jwplatta/trade_lab/blob/main/notebooks/SPX%20Short-Term%20IV-RV%20Spread.ipynb) along with the data [here](https://github.com/jwplatta/trade_lab/tree/main/notebooks/data).
+A notebook with these calculations and the results can be found [here](https://github.com/jwplatta/portfolio-research/blob/main/notebooks/shared/SPX%20Short-Term%20IV-RV%20Spread.ipynb) along with the data [here](https://github.com/jwplatta/portfolio-research/blob/main/notebooks/shared/data).
 
 ## Results
 

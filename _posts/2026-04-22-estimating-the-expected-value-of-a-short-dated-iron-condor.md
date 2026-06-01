@@ -35,7 +35,7 @@ $$
 
 The resulting EV is negative, but the calculation relies on some strong assumptions. In particular, it assumes the position is held to maximum loss and ignores trade management entirely. In practice, positions are rarely held to expiration, especially under adverse conditions. Rather, exits are typically determined by stop-loss rules. These rules make the path dependence of the trade an important aspect of the payoff.
 
-A more realistic estimation of EV incorporates a stop-loss threshold. The EV can then be written as: 
+A more realistic estimation of EV incorporates a stop-loss threshold. The EV can then be written as:
 $$
 E(x) = (1 - \delta_{\text{put stop}} - \delta_{\text{call stop}}) \cdot \text{credit} + (\delta_{\text{put stop}} + \delta_{\text{call stop}}) \cdot L
 $$
@@ -77,8 +77,8 @@ Using this model, option prices can be recomputed using Black–Scholes as spot 
 > 3. Reprice each option leg with the new spot price, volatility, and time remaining with Black-Scholes
 > 4. Sum the four leg values to get the new iron condor price
 > 5. Check if the price triggers the stop-loss threshold
-  
-When compared against a later sample of the same option chain, the model overstates individual leg prices but produces a reasonably accurate estimate of the total condor value. 
+
+When compared against a later sample of the same option chain, the model overstates individual leg prices but produces a reasonably accurate estimate of the total condor value.
 
 |        |        |     | Sample 1 | (spot=6318) |        | Sample 2 | (spot=6505) |        | Calculated  | (spot=6518) |
 | ------ | ------ | --- | -------- | ----------- | ------ | -------- | ----------- | ------ | ----------- | ----------- |
@@ -99,4 +99,4 @@ Using the IV model to update prices as spot moves, the EV of the trade becomes n
 
 None of these EV calculations are perfect. They demonstrate that EV estimates for short-dated options are highly sensitive to modeling assumptions. Under simplistic assumptions the trade can appear more attractive. As the assumptions become increasingly realistic, the estimated EV deteriorates. The implication is that the payoff structure of the iron condor itself doesn't generate positive EV. Any persistent profitability is more likely to arise from factors such as regime selection, timing, execution, and the identification of mispriced volatility, rather than from the structure of the trade in isolation.
 
-Full notebook with code for EV calculations and to build the IV surface model along with the sampled options data can be found [here](https://github.com/jwplatta/trade_lab/blob/main/notebooks/IronCondor%20EV%20Calculations.ipynb).
+Full notebook with code for EV calculations and to build the IV surface model along with the sampled options data can be found [here](https://github.com/jwplatta/portfolio-research/blob/main/notebooks/shared/IronCondor%20EV%20Calculations.ipynb).
