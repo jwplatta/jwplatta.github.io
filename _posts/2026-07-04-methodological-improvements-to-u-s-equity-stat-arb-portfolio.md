@@ -29,11 +29,11 @@ The implementation builds a boolean membership mask as a date-by-ticker DataFram
 The second change was to my validation methodology. The original portfolio was built by running signal sweeps on the full historical in-sample period and then selecting the combination of sleeves that maximized in-sample Sharpe subject to correlation constraints. This process identified strategies that are genuinely good, but it doesn't distinguish them from strategies that happen to fit idiosyncrasies in the 2015–2023 period.
 
 So, the new framework introduces a walkforward validation loop with five expanding training windows:
-- 2015–2018 → validate 2019
-- 2015–2019 → validate 2020
-- 2015–2020 → validate 2021
-- 2015–2021 → validate 2022
-- 2015–2022 → validate 2023
+- train 2015–2018 / validate 2019
+- train 2015–2019 / validate 2020
+- train 2015–2020 / validate 2021
+- train 2015–2021 / validate 2022
+- train 2015–2022 / validate 2023
 
 The aim is to justify each portfolio decision on data the portfolio hasn't already seen. For each fold, the training window grows by one year while the validation year stays fixed at the next calendar year out. This mirrors how a portfolio would actually be managed, i.e. you make decisions based on what you know, then the next year happens.
 
