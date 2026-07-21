@@ -11,11 +11,9 @@ toc: true
 img_path: /assets/img/posts/
 math: true
 ---
-Lots of statistical arbitrage research focuses on finding a strong signal. My research ended up pointing towards another conclusion. Diversification across economically distinct alpha signals matters more than maximizing the standalone Sharpe of any one signal.
+This is a short summary of a basic statistical arbitrage portfolio.  I use S&P 500 equities combining momentum, active-return mean reversion, residual mean reversion, distance-pairs relative value, sector relative mean reversion, and event driven gap reversion into a dollar neutral long short framework. I also use regime gating, risk scaling, and an iterative sleeve selection to combine sleeves with low correlation into a diversified portfolio robust across weighting schemes and ablation tests.
 
-I built a diversified statistical arbitrage portfolio using S&P 500 equities combining momentum, active-return mean reversion, residual mean reversion, distance-pairs relative value, sector relative mean reversion, and event driven gap reversion into a dollar neutral long short framework. I use regime gating, risk scaling, and iterative portfolio construction to combine sleeves with low correlation into a diversified portfolio robust across weighting schemes and ablation tests.
-
-The final portfolio achieves an in sample net Sharpe ratio above 2.0 after 10 basis points of transaction costs during the in-sample 2015–2023 period. During the out-of-sample period (2024–2026), performance weakens, but remains profitable while preserving much of the portfolio’s diversification structure.
+The final portfolio achieves an in-sample net Sharpe ratio above 2.0 after 10 basis points of transaction costs during the in-sample 2015–2023 period. During the out-of-sample period (2024–2026), performance weakens, but remains profitable while preserving some of the portfolio's diversification structure.
 
 ## **Diversification matters more than standalone Sharpe**
 
@@ -31,8 +29,6 @@ Specifically, distance-pairs mean reversion stands apart from the broader mean r
 Momentum and event driven gap reversion also remain fairly independent from the broader mean reversion cluster. Monotonic momentum correlates only 0.16 to 0.18 with the MR families while event driven gap reversion captures short horizon idiosyncratic dislocations on a distinct timescale.
 
 The key result here is that no pair of families exhibits dangerously high correlation. The diversification benefit appear structural rather than dependent on any single dominant signal.
-
-
 
 ## **Distance pairs are the portfolio core**
 
