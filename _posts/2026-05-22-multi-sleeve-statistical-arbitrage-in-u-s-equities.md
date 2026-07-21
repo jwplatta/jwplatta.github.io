@@ -11,7 +11,7 @@ toc: true
 img_path: /assets/img/posts/
 math: true
 ---
-This is a short summary of a basic statistical arbitrage portfolio.  I use S&P 500 equities combining momentum, active-return mean reversion, residual mean reversion, distance-pairs relative value, sector relative mean reversion, and event driven gap reversion into a dollar neutral long short framework. I also use regime gating, risk scaling, and an iterative sleeve selection to combine sleeves with low correlation into a diversified portfolio robust across weighting schemes and ablation tests.
+This is a short summary of a basic statistical arbitrage portfolio.  I use S&P 500 equities combining momentum, active-return mean reversion, residual mean reversion, distance-pairs relative value, sector relative mean reversion, and event driven gap reversion into a dollar neutral long short framework. I also use regime gating, risk scaling, and an iterative sleeve selection to combine sleeves with low correlation into a diversified portfolio across weighting schemes and ablation tests.
 
 The final portfolio achieves an in-sample net Sharpe ratio above 2.0 after 10 basis points of transaction costs during the in-sample 2015–2023 period. During the out-of-sample period (2024–2026), performance weakens, but remains profitable while preserving some of the portfolio's diversification structure.
 
@@ -32,7 +32,7 @@ The key result here is that no pair of families exhibits dangerously high correl
 
 ## **Distance pairs are the portfolio core**
 
-The portfolio buildout starts with the strongest conditioned mean reversion sleeves, but diversification really starts once the distance-pairs (DPMR) sleeves are added. Combining the two strongest MR sleeves improves Sharpe from 1.07 to 1.24, but because they share moderate correlation the combination doesn't dramatically reduce drawdown. Adding the first DPMR sleeve pushes Sharpe from 1.24 to 1.56 while max drawdown also drops from −6.0% to −3.8%.
+The portfolio buildout starts with the strongest conditioned mean reversion sleeves, but diversification really starts once the distance-pairs (DPMR) sleeves are added. Combining the two strongest MR sleeves improves Sharpe from 1.07 to 1.24, but because they share moderate correlation the combination doesn't dramatically reduce drawdown. Adding the first DPMR sleeve pushes Sharpe from 1.24 to 1.56 while max drawdown also drops from -6.0% to -3.8%.
 
 | Sleeve Added                           | Sleeves | Net SR | Gross SR | Turnover | Max DD  |
 | -------------------------------------- | ------- | ------ | -------- | -------- | ------- |
@@ -69,7 +69,7 @@ Similar reductions appear in residual MR, sector-relative, and gap reversion sle
 
 Distance-pairs behaves a little differently. Conditioning produces almost no improvement because the partner matching mechanism already implicitly conditions on the stability of the peer relationship. The raw relative value convergence signal is already strong on its own. However, the unconstrained always-on DPMR sleeve becomes the dominant execution bottleneck in the portfolio. Its high turnover creates continuous pair spread trading activity across all market regimes making it especially sensitive to slippage, crowding, and spread compression as capital scales.
 
-Still the diversified portfolio behaves much more robustly than the individual sleeves. At the baseline 10 bps costs assumption, the portfolio retains a 2.089 net Sharpe despite roughly 20% cost drag. Even at 25 bps, the portfolio still maintains a 1.304 Sharpe despite several individual sleeves becoming marginal or unprofitable.
+Still the diversified portfolio behaves much better than the individual sleeves. At the baseline 10 bps costs assumption, the portfolio retains a 2.089 net Sharpe despite roughly 20% cost drag. Even at 25 bps, the portfolio still maintains a 1.304 Sharpe despite several individual sleeves becoming marginal or unprofitable.
 
 ## **The portfolio fails when expected**
 
