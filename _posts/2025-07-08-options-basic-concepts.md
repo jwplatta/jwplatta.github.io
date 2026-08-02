@@ -7,6 +7,7 @@ tags: [investing, writing-to-learn]
 math: true
 toc: true
 img_path: /assets/img/posts/
+published: false
 ---
 The last year and a half I've been learning how to trade options. It took me some time to get comfortable thinking in terms of options and I've enjoyed teaching others the basic concepts. I strongly believe that once a person takes the time to sit down and think carefully about the fundamental concepts and some basic examples, it's easy. So, although there are plenty of summaries on the web and, of course, any of the LLM powered chat tools can crank out an excellent tutorial on options trading, I'm writing my own summary to check my own understanding and to also have something to share with others.
 

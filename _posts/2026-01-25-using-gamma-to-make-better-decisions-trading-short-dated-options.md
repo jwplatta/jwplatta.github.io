@@ -7,6 +7,7 @@ tags: [spx, iron-condor, gamma, market-structure]
 math: true
 toc: true
 img_path: /assets/img/posts/
+published: false
 ---
 I've been trading short-dated options on the SPX (mostly 0 and 1-DTE iron condors). It's very easy for this strategy to look like it's working. If you manage your sizing, pick reasonable entries, and manage risk aggressively, it often feels like it can't lose. It's possible to win 90–95% of the time. But the remaining 5–10% when the trade does not work can be catastrophic. When things go wrong, they can go very wrong.
 
