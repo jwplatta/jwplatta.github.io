@@ -17,14 +17,14 @@ In this post, I evaluate the economic impact of a regime forecasting model on a 
 
 As a brief recap, I’ve been working toward automating a short volatility carry strategy that I have traded manually for over a year. The initial step was to construct a simple baseline backtest for a 1DTE iron condor. That baseline performed poorly, but it revealed a clear pattern: losses are concentrated on days where the intraday range expands beyond a certain threshold.
 
-In the previous post, I showed that these high-range regimes are at least partially predictable using simple features such as recent realized volatility and term structure signals from VIX and VIX9D. The natural next question is whether those forecasts have any economic value. Specifically, can we improve the performance of the strategy by avoiding trades on days that are predicted to be high range?
+Elsewhere I showed that these high-range regimes are at least partially predictable using simple features such as recent realized volatility and term structure signals from VIX and VIX9D. So next I wanted to find out whether those forecasts have any economic value. Specifically, can I improve the performance of the strategy by avoiding trades on days that are predicted to be high range?
 
 All the experiments and charts are generated using this [notebook](https://github.com/jwplatta/portfolio-research/blob/main/notebooks/shared/spx-1dte-forecasting-regime.ipynb) and the data you can find [here](https://github.com/jwplatta/portfolio-research/blob/main/notebooks/shared/data).
 ## Experimental Setup
 
 Rather than running a new backtest, I apply the regime model as a filter on the existing set of trades. The goal is to isolate the incremental value of the forecast without introducing additional complexity.
 
-The model is a logistic regression classifier trained to predict whether the next trading day’s SPX range exceeds a fixed threshold (51.698). The feature set includes:
+The model is a logistic regression classifier trained to predict whether the next trading day's SPX range exceeds a fixed threshold $51.698$. The feature set includes:
 - Prior day VIX–VIX9D slope
 - 5-day average SPX range
 - Prior day absolute return
@@ -32,7 +32,7 @@ The model is a logistic regression classifier trained to predict whether the nex
 
 Days predicted to be in a high-range regime are excluded from the trade set. Performance is then recomputed on the remaining trades.
 
-To reduce lookahead bias, the model is trained on data from April 2022 through December 2023 and evaluated on trades from January 2024 through December 2025. The range threshold itself is determined from the full sample, which introduces some residual bias, but the primary results are out-of-sample with respect to the model.
+I trained the model on data from April 2022 through December 2023 and held out the trades from January 2024 through December 2025 as an evaluation set. I did cheat a bit by calculating the range threshold from the full sample of trades. This creates some lookahead bias. I did it given the scant amount of data. However, the primary results are out-of-sample with respect to the model. Still the coefficients are estimated using 2022–2023 observations, and then applied unchanged to 2024–2025.
 ## Results
 
 Filtering trades using the regime model improves performance across all metrics.
@@ -41,7 +41,7 @@ The equity curve becomes noticeably more stable, and the filtered strategy avoid
 
 ![Equity and Drawdown SPX Regime Filter](equity_drawdown_spx_regime_filter.png)
 
-From a classification standpoint, the regime model exhibits meaningful predictive power. Accuracy is approximately 71%, with balanced performance across low and high-range regimes. So the model clearly captures non-random structure in the data even if it's imperfect.
+The regime model has some meaningful predictive power from a classification standpoint. Its accuracy is approximately $71%$ with balanced performance across low and high-range regimes. So the model captures some non-random structure in the data even if it's imperfect.
 
 |            | Precision | Recall | F1-Scores |
 | ---------- | --------- | ------ | --------- |
@@ -53,7 +53,7 @@ From a classification standpoint, the regime model exhibits meaningful predictiv
 
 However, the most important insight comes from examining performance conditional on predicted probability.
 
-The model successfully identifies clearly adverse regimes (high-probability buckets), which are removed by the filter. However, losses remain in the lowest probability bucket, which is supposed to represent the safest trades. As a result, the strategy remains unprofitable despite the improvement in aggregate metrics.
+The model successfully identifies clearly adverse regimes (high-probability buckets), which are removed by the filter. However, losses remain in the lowest probability bucket, which is supposed to represent the safest trades. As a result, the strategy remains unprofitable despite the improvement in aggregate.
 
 | Probability Bucket | Trade Count | Expectancy |
 | ------------------ | ----------- | ---------- |
@@ -67,11 +67,11 @@ The model successfully identifies clearly adverse regimes (high-probability buck
 
 The results are mixed but informative.
 
-On one hand, the range regime model is directionally useful. It reduces exposure to high range days and improves the overall distribution of returns. This result is consistent with the earlier finding that high range regimes drive a disproportionate amount of the strategy's risk. On the other hand, the model fails to address the most important component of the problem: tail risk.
+On one hand, the range regime model is directionally useful. It reduces exposure to high range days and improves the overall distribution of returns. This result is consistent with the earlier finding that high range regimes are linked with a disproportionate amount of the strategy's risk. On the other hand, the model fails to address the worse tail risk.
 
-The probability bucket analysis makes this clear. While the model removes many trades in obviously hostile regimes (probability buckets 0.4 to 1.0), it still allows a subset of damaging trades to pass through, viz. those in the lowest probability bucket (0.0 to 0.2). These trades dominate the left tail of the PnL distribution and ultimately determine the strategy’s performance.
+The probability bucket analysis makes this clear. While the model removes many trades in obviously hostile regimes (probability buckets 0.4 to 1.0), it still allows a subset of damaging trades to pass through, viz. those in the lowest probability bucket (0.0 to 0.2). These trades dominate the left tail of the PnL distribution and ultimately determine the strategy's performance.
 
-There are two structural reasons for this.
+There're at least a couple structural reasons for this.
 
 First, the dataset is relatively small. With only a few hundred observations, the model is unlikely to learn the full range of conditions that lead to extreme outcomes. In effect, the model has limited ability to estimate the behavior of rare events that cause high range days which are precisely the events that matter most for this strategy.
 
@@ -79,7 +79,7 @@ Second, and perhaps more important, the strategy itself is highly path dependent
 
 This path dependence makes tail events inherently difficult to anticipate and manage using a simple regime model. The model successfully captures broad volatility conditions, but it doesn't capture the specific sequences of price movements that trigger large losses. In practice, many of these events are driven by shocks or regime transitions that aren't well represented in the feature set for the model.
 
-In short, the model improves exposure to regimes, but it's too coarse to reliably eliminate the tail events that dominate the strategy’s risk and would make the strategy profitable.
+In short, the model improves exposure to regimes, but it's too coarse to reliably eliminate the tail events that dominate the strategy's risk and would make the strategy profitable.
 ## Conclusion
 
 The high range regime forecast model has clear economic value. Conditioning trades on predicted range reduces drawdowns and improves overall performance. Yet it's insufficient to make a 1DTE short volatility strategy viable on its own.
