@@ -1,6 +1,7 @@
-# README
+# jwplatta.github.io
 
-## Description
+Personal site and research blog. Notes on quantitative finance, machine learning, natural language processing, and software -- published as I go.
 
-My personal [site](https://jwplatta.github.io/) for hosting a blog and a portfolio of projects.
+Built with Jekyll. Hosted on GitHub Pages.
 
+[jwplatta.github.io](https://jwplatta.github.io/)
