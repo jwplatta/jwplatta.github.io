@@ -91,5 +91,7 @@ As a baseline comparison, I also regressed the autocorrelation of 5-min returns 
 
 In sum, the absolute returns estimates are very small and statistically inconclusive. But I find some evidence that higher prior session gamma imbalance is associated with lower 5-minute SPX return autocorrelation. This effect is stronger for the 1DTE+ dataset. Adding gamma imbalance to the prior session ATM IV for the autocorrelation regression increases the in-sample $R^2$ from 4.44% to 10.24% which is encouraging, but most of the variation in the return autocorrelation remains unexplained. One possibility is that the gamma imbalance signal (from the autocorrelation regression) might be paired with other weak signals to produce a stronger explanation returns.
 
+You can find the experiments in this [notebook](https://github.com/jwplatta/research/blob/main/notebooks/shared/gamma-fragility.ipynb). The underlying dataset isn't included because Schwab's data licensing terms restrict redistribution.
+
 ## Works Cited
 - Barbon, A., & Buraschi, A. (2021). Gamma fragility [Working paper](https://doi.org/10.2139/ssrn.3725454).
