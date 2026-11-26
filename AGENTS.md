@@ -4,7 +4,7 @@ Instructions for AI agents working on this Jekyll blog.
 
 ## Overview
 
-This is a personal research blog at [jwplatta.github.io](https://jwplatta.github.io/). It publishes research notes on quantitative finance, machine learning, NLP, and software engineering. Built with a custom minimal theme (no frameworks, no Chirpy), deployed to GitHub Pages via GitHub Actions.
+This is a personal research blog at [jwplatta.github.io](https://jwplatta.github.io/). It publishes research notes on quantitative finance, machine learning, NLP, and software engineering. Built with a custom minimal theme, deployed to GitHub Pages via GitHub Actions.
 
 ## Git Conventions
 
