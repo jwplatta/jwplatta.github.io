@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sharpe Ratio and Drawdowns in a 1DTE SPX Strategy
+title: Sharpe Ratio and Drawdowns in a Short-Dated Options Strategy
 date: 2026-03-23 11:49 -0500
 tags: [risk-metrics, regime-detection, options]
 categories: [quantitative-finance]

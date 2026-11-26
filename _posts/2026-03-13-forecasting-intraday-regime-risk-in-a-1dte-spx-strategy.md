@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Forecasting Intraday Regime Risk in a 1DTE SPX Strategy
+title: Forecasting Intraday Regime Risk in Daily Index Options
 date: 2026-03-13 16:55 -0500
 math: true
 tags: [regime-detection, random-forest, options]

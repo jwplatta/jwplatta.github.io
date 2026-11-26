@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Economic Impact of Regime Forecasting in a 1DTE SPX Strategy
+title: The Economic Impact of Regime Forecasting on Same-Day Expiry Options
 date: 2026-04-03 16:05 -0500
 tags: [regime-detection, backtesting, options]
 categories: [quantitative-finance]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Distribution and Regime Effects in a 1DTE Options Strategy
+title: Distribution and Regime Effects in Short-Dated S&P 500 Options
 categories: [quantitative-finance]
 tags: [regime-detection, options, iron-condor]
 math: true
