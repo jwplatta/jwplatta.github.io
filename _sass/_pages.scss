@@ -1,0 +1,111 @@
+// Archive page
+.archive-list {
+  .archive-year-title {
+    font-size: 1.5rem;
+    margin-top: $space-xl;
+    margin-bottom: $space-sm;
+    padding-bottom: $space-xs;
+    border-bottom: 1px solid $color-border-light;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .archive-posts {
+    list-style: none;
+    padding: 0;
+  }
+
+  .archive-item {
+    display: flex;
+    gap: $space-md;
+    padding: $space-xs 0;
+    align-items: baseline;
+
+    time {
+      font-family: $font-code;
+      font-size: $font-size-small;
+      color: $color-text-secondary;
+      flex-shrink: 0;
+      width: 60px;
+    }
+
+    a {
+      color: $color-text;
+      &:hover { color: $color-accent; }
+    }
+  }
+}
+
+// Categories page
+.taxonomy-list {
+  .taxonomy-name {
+    font-size: 1.25rem;
+    margin-top: $space-lg;
+    margin-bottom: $space-xs;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    a {
+      color: $color-text;
+      &:hover { color: $color-accent; }
+    }
+  }
+
+  .taxonomy-count {
+    font-size: $font-size-small;
+    color: $color-text-secondary;
+    font-weight: 400;
+  }
+
+  .taxonomy-posts {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: $space-xs 0;
+      display: flex;
+      gap: $space-sm;
+      align-items: baseline;
+
+      time {
+        font-family: $font-code;
+        font-size: $font-size-small;
+        color: $color-text-secondary;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+// Tags page
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-xs;
+
+  .tag-link {
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid $color-border;
+    border-radius: 3px;
+    font-family: $font-nav;
+    font-size: $font-size-small;
+    color: $color-text-secondary;
+    text-decoration: none;
+
+    &:hover {
+      border-color: $color-accent;
+      color: $color-accent;
+      text-decoration: none;
+    }
+
+    .tag-count {
+      color: $color-text-secondary;
+      font-size: 0.75rem;
+    }
+  }
+}
