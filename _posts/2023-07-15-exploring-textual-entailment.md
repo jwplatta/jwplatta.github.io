@@ -3,7 +3,7 @@ layout: post
 title:  "Exploring Textual Entailment: Naive Bayes, Neural Network, and Text-Davinci"
 date:   2023-07-15 10:00:00 -0500
 categories: [natural-language-processing]
-tags: [textual-entailment, transformers, snli]
+tags: [textual-entailment, transformers, large-language-models]
 math: true
 toc: true
 img_path: /assets/img/posts/
