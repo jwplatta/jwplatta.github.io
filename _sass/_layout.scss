@@ -242,6 +242,13 @@
     font-size: 2rem;
     margin-top: 0;
   }
+
+  .page-subtitle {
+    font-family: $font-nav;
+    font-size: $font-size-small;
+    color: $color-text-secondary;
+    margin-top: $space-xs;
+  }
 }
 
 // Mobile
