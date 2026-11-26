@@ -1,0 +1,60 @@
+// Table of contents
+.toc {
+  margin-bottom: $space-lg;
+  border: 1px solid $color-border-light;
+  border-radius: 4px;
+  padding: $space-sm $space-md;
+  background: rgba(0, 0, 0, 0.01);
+
+  summary {
+    font-family: $font-nav;
+    font-weight: 600;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $color-text-secondary;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '+ ';
+    }
+  }
+
+  &[open] summary::before {
+    content: '- ';
+  }
+
+  nav {
+    margin-top: $space-xs;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 2px 0;
+
+      a {
+        font-family: $font-nav;
+        font-size: $font-size-small;
+        color: $color-text-secondary;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+
+      &.toc-h3 {
+        padding-left: $space-md;
+      }
+    }
+  }
+}

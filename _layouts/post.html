@@ -33,6 +33,10 @@ layout: default
     </div>
   </header>
 
+  {% if page.toc %}
+    {% include toc.html %}
+  {% endif %}
+
   <div class="post-content">
     {{ content }}
   </div>

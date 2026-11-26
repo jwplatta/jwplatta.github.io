@@ -17,9 +17,6 @@ layout: default
         {% endfor %}
       {% endif %}
     </div>
-    {% if post.excerpt %}
-      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
-    {% endif %}
   </li>
   {% endfor %}
 </ul>
