@@ -2,8 +2,8 @@
 layout: post
 title: "Implementing Magic Links with AWS Amplify and Next.js"
 date: 2024-08-30 22:24 -0500
-categories: [web-development]
-tags: [javascriot, aws, nextjs, authentication]
+categories: [software]
+tags: [nextjs, aws-amplify, authentication]
 math: true
 toc: true
 img_path: /assets/img/posts/

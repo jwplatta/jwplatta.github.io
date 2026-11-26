@@ -3,7 +3,7 @@ layout: post
 title:  "Generalizing Centipede Game States for Reinforcement Learning"
 date:   2023-06-19 10:59:39 -0500
 categories: [machine-learning]
-tags: [reinforcement-learning, centipede, atari, clustering, k-means, k-nearest-neighbors, adaptive-resolution]
+tags: [reinforcement-learning, k-means, knn]
 math: true
 toc: true
 img_path: /assets/img/posts/

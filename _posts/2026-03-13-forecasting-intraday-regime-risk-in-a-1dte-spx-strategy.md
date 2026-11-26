@@ -3,14 +3,10 @@ layout: post
 title: Forecasting Intraday Regime Risk in a 1DTE SPX Strategy
 date: 2026-03-13 16:55 -0500
 math: true
-tags:
-  - spx
-  - 1dte-trade
+tags: [regime-detection, random-forest, options]
 toc: true
 img_path: /assets/img/posts/
-categories:
-  - options-trading
-  - writing-to-learn
+categories: [quantitative-finance]
 ---
 ## **Motivation**
 

@@ -2,8 +2,8 @@
 layout: post
 title: Using Gamma to Make Better Decisions Trading Short-Dated Options
 date: 2026-01-25 16:25 -0600
-categories: [options-trading, writing-to-learn]
-tags: [spx, iron-condor, gamma, market-structure]
+categories: [quantitative-finance]
+tags: [gamma, iron-condor, market-microstructure]
 math: true
 toc: true
 img_path: /assets/img/posts/

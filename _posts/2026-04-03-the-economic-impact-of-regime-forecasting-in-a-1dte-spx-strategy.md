@@ -2,12 +2,8 @@
 layout: post
 title: The Economic Impact of Regime Forecasting in a 1DTE SPX Strategy
 date: 2026-04-03 16:05 -0500
-tags:
-  - spx
-  - 1dte-trade
-categories:
-  - writing-to-learn
-  - options-trading
+tags: [regime-detection, backtesting, options]
+categories: [quantitative-finance]
 img_path: /assets/img/posts/
 toc: true
 ---

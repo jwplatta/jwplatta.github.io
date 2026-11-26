@@ -2,10 +2,8 @@
 layout: post
 title: Learning, Building, and Doing Research with LLMs
 date: 2026-05-30 13:59 -0500
-tags:
-  - quant-finance
-  - llms
-categories:
+tags: [large-language-models, research-tools]
+categories: [quantitative-finance]
 toc:
 img_path: /assets/img/posts/
 math:

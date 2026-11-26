@@ -3,7 +3,8 @@ layout: post
 title: Gamma Imbalance, Absolute Returns, and Return Autocorrelation in SPX
 date: 2026-11-24 20:19 -0600
 math: true
-categories:
+categories: [quantitative-finance]
+tags: [gamma, market-microstructure, return-autocorrelation]
 img_path: /assets/img/posts/
 toc:
 published: false
@@ -43,6 +44,8 @@ The following table summarizes selected results of Barbon and Buraschi. The gamm
 | Absolute daily returns:<br>pooled regression across 4 equity indices,<br>controlling for prior IV<br>with no baseline effects | Higher gamma associated with<br>smaller absolute returns      | −0.1479                       | −4.42  | 25.2%       | 21,434       |
 | Absolute daily returns: pooled regression across<br>4 equity indices with asset and month effects                       | Negative association remains                               | −0.0549                       | −3.33  | 35.8%       | 21,434       |
 | 5-minute autocorrelation: individual-stocks with IV,<br>volume, asset and month controls                                | Higher gamma associated with more<br>reversal / less momentum | −1.814                        | −4.830 | 0.3%        | 1,541,400    |
+
+You can find the experiments in this [notebook](https://github.com/jwplatta/research/blob/main/notebooks/shared/gamma-fragility.ipynb). The underlying dataset is not included because Schwab's data licensing terms restrict redistribution.
 
 ## Works Cited
 - Barbon, A., & Buraschi, A. (2021). Gamma fragility [Working paper](https://doi.org/10.2139/ssrn.3725454).

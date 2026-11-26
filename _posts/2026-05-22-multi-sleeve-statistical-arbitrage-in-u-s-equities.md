@@ -2,11 +2,8 @@
 layout: post
 title: Multi-Sleeve Statistical Arbitrage in U.S. Equities
 date: 2026-05-22 11:20 -0500
-tags:
-  - quant-finance
-  - stat-arb
-categories:
-  - writing-to-learn
+tags: [stat-arb, factor-models]
+categories: [quantitative-finance]
 toc: true
 img_path: /assets/img/posts/
 math: true

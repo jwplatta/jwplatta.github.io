@@ -2,11 +2,8 @@
 layout: post
 title: Some Notes on Short-Term SPX Vol
 date: 2026-04-09 13:32 -0500
-tags:
-  - spx
-categories:
-  - writing-to-learn
-  - options-trading
+tags: [volatility, options]
+categories: [quantitative-finance]
 img_path: /assets/img/posts/
 toc: true
 ---

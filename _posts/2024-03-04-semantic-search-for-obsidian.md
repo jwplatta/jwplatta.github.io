@@ -2,8 +2,8 @@
 layout: post
 title:  "Semantic Search for Obsidian"
 date:   2024-03-04 10:00:00 -0500
-categories: [machine-learning]
-tags: [nlp, semantic search, obsidian, node.js, sqlite, text embeddings]
+categories: [natural-language-processing]
+tags: [text-embeddings, semantic-search, sqlite]
 math: true
 toc: true
 img_path: /assets/img/posts/

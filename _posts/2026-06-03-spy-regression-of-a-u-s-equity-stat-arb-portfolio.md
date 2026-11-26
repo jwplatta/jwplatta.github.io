@@ -2,11 +2,9 @@
 layout: post
 title: SPY Regression of a U.S. Equity Stat-Arb Portfolio
 date: 2026-06-03 12:43 -0500
-tags:
-  - quant-finance
-  - stat-arb
+tags: [stat-arb, regression, factor-models]
 math: true
-categories:
+categories: [quantitative-finance]
 img_path: /assets/img/posts/
 toc:
 ---

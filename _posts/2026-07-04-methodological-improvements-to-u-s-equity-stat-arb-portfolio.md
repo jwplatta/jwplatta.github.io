@@ -2,11 +2,9 @@
 layout: post
 title: Methodological Improvements to U.S. Equity Stat-Arb Portfolio
 date: 2026-07-04 14:00 -0500
-tags:
-  - quant-finance
-  - stat-arb
+tags: [stat-arb, factor-models]
 math: true
-categories:
+categories: [quantitative-finance]
 img_path: /assets/img/posts/
 toc:
 ---

@@ -2,11 +2,8 @@
 layout: post
 title: Estimating the Expected Value of a Short-Dated Iron Condor
 date: 2026-04-22 14:43 -0500
-tags:
-  - spx
-categories:
-  - writing-to-learn
-  - options-trading
+tags: [expected-value, iron-condor, options]
+categories: [quantitative-finance]
 toc: true
 img_path: /assets/img/posts/
 math: true
