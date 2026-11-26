@@ -1,0 +1,70 @@
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  & + p {
+    margin-top: 0;
+  }
+}
+
+// Post content typography
+.post-content {
+  h2 {
+    margin-top: $space-xl;
+    padding-bottom: $space-xs;
+    border-bottom: 1px solid $color-border-light;
+  }
+
+  h3 {
+    margin-top: $space-lg;
+  }
+
+  p {
+    margin-bottom: $space-md;
+  }
+
+  ul, ol {
+    margin-bottom: $space-md;
+
+    li {
+      margin-bottom: $space-xs;
+    }
+
+    ul, ol {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    margin: $space-lg auto;
+    border-radius: 2px;
+  }
+
+  // Figures
+  figure {
+    margin: $space-lg 0;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+    }
+
+    figcaption {
+      font-size: $font-size-small;
+      color: $color-text-secondary;
+      margin-top: $space-xs;
+      font-style: italic;
+    }
+  }
+
+  // Strong and emphasis
+  strong {
+    font-weight: 700;
+  }
+
+  // Footnotes
+  .footnotes {
+    font-size: $font-size-small;
+    border-top: 1px solid $color-border;
+    margin-top: $space-xl;
+    padding-top: $space-sm;
+  }
+}

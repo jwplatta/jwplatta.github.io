@@ -1,0 +1,48 @@
+// Academic-style tables with horizontal scroll for wide tables
+.post-content {
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: $space-md;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-bottom: $space-md;
+    font-size: $font-size-small;
+    font-family: $font-nav;
+    white-space: nowrap;
+
+    th, td {
+      padding: $space-xs $space-sm;
+      text-align: left;
+      border: none;
+    }
+
+    thead {
+      th {
+        font-weight: 600;
+        border-top: 2px solid $color-text;
+        border-bottom: 1px solid $color-text;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $color-border-light;
+
+        &:last-child {
+          border-bottom: 2px solid $color-text;
+        }
+      }
+
+      tr:nth-child(even) {
+        background: rgba(0, 0, 0, 0.02);
+      }
+    }
+
+    td:not(:first-child) {
+      font-variant-numeric: tabular-nums;
+    }
+  }
+}

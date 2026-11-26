@@ -1,0 +1,16 @@
+// KaTeX overrides for consistent styling
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: $space-xs 0;
+  margin: $space-sm 0 $space-md;
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+// Ensure math doesn't overflow on mobile
+.katex-display > .katex {
+  max-width: 100%;
+}
