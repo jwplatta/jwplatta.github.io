@@ -1,7 +1,7 @@
 # Bundler cache
 .bundle
 vendor
-Gemfile.lock
+# Gemfile.lock is committed for reproducible CI builds
 
 # Jekyll cache
 .jekyll-cache
